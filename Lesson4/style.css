@@ -1,0 +1,9 @@
+.addToCart-btn {
+  background-color: yellow;
+  border: solid 2px black;
+}
+
+.buyNow-btn {
+  background-color: orange;
+  border: solid 2px black;
+}
