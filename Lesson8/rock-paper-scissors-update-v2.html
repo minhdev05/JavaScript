@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 7 - Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./rock-paper-scissors-updated-v2.css" />
+  </head>
+  <body>
+    <p class="game-name">Rock Paper Scissors</p>
+    <!--
+    Steps:
+    1. Computer randomly selects a move
+        + Use Math.random() to generate a random number in [0, 1)
+        + If number in [0, 1/3) => Computer move: Rock
+        + If number in [1/3, 2/3] => Computer move: Paper
+        + If number if [2/3, 1) => Computer move: Scissors
+    2. Compare the moves to get the result
+    3. Display the result in a popup
+    4. Update a score
+    5. Display the result and score in a popup
+    -->
+
+    <button class="operation-btn" onclick="playGame('Rock')">
+      <img class="operation" src="./images/rock-emoji.png" alt="rock-img" />
+    </button>
+    <button class="operation-btn" onclick="playGame('Paper')">
+      <img class="operation" src="./images/paper-emoji.png" alt="paper-img" />
+    </button>
+    <button class="operation-btn" onclick="playGame('Scissors')">
+      <img
+        class="operation"
+        src="./images/scissors-emoji.png"
+        alt="scissors-img"
+      />
+    </button>
+    <p class="result"></p>
+    <p class="moves"></p>
+    <p class="score"></p>
+    <button class="reset-btn" onclick="resetScore()">Reset Score</button>
+
+    <script src="./rock-paper-scissors-updated-v2.js"></script>
+  </body>
+</html>

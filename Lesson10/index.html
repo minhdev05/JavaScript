@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 10 - DOM</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <p>Youtube Subcribe Button</p>
+    <button onclick="subcribe()" class="js-subcribe-btn subcribe-btn">
+      Subcribe
+    </button>
+    <br /><br /><br />
+
+    <p>Rock Paper Scissors</p>
+    <a href="../Lesson8/rock-paper-scissors-update-v2.html" target="_self"
+      >Click here</a
+    >
+    <br /><br /><br />
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <input
+      class="js-cost-input cost-input"
+      placeholder="Cost of order"
+      onkeydown="handleCostKeyDown(event)"
+    />
+    <button class="calculate-btn" onclick="calculate()">Calculate</button>
+    <p class="result"></p>
+
+    <script>
+      function subcribe() {
+        const subcribeBtn = document.querySelector(".js-subcribe-btn");
+        if (subcribeBtn.innerText === "Subcribe") {
+          subcribeBtn.innerText = "Subcribed";
+          subcribeBtn.classList.add("is-subcribed");
+        } else {
+          subcribeBtn.innerText = "Subcribe";
+          subcribeBtn.classList.remove("is-subcribed");
+        }
+      }
+
+      function handleCostKeyDown(event) {
+        if (event.key === "Enter") {
+          calculate();
+        }
+      }
+
+      function calculate() {
+        let cost = Number(document.querySelector(".js-cost-input").value);
+        let displayResult = document.querySelector(".result");
+        if (cost < 40) cost += 10;
+        displayResult.innerHTML = `$${cost}`;
+      }
+    </script>
+  </body>
+</html>

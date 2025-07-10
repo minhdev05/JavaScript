@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 9 - DOM</title>
+  </head>
+  <body>
+    <!-- <button>Hello</button>
+    <button class="secondBtn">Second</button> -->
+
+    <p>Youtube Subcribe Button</p>
+    <button onclick="subcribe()" class="subcribeBtn">Subcribe</button>
+    <br /><br /><br />
+
+    <p>Rock Paper Scissors</p>
+    <a href="../Lesson8/rock-paper-scissors-update-v2.html" target="_self"
+      >Click here</a
+    >
+    <br /><br /><br />
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <input
+      class="input"
+      placeholder="Cost of order"
+      onkeydown="handleCostKeyDown(event)"
+    />
+    <button onclick="calculate()">Calculate</button>
+    <p class="result"></p>
+
+    <script>
+      function subcribe() {
+        const subcribeBtn = document.querySelector(".subcribeBtn");
+        if (subcribeBtn.innerText === "Subcribe") {
+          subcribeBtn.innerText = "Subcribed";
+        } else {
+          subcribeBtn.innerText = "Subcribe";
+        }
+      }
+
+      function handleCostKeyDown(event) {
+        if (event.key === "Enter") {
+          calculate();
+        }
+      }
+
+      function calculate() {
+        let cost = Number(document.querySelector(".input").value);
+        let displayResult = document.querySelector(".result");
+        if (cost < 40) cost += 10;
+        displayResult.innerHTML = `$${cost}`;
+      }
+
+      //   document.body.innerHTML = "hello";
+      //   document.title = "Good job!";
+      //   console.log(document.title);
+      //   console.log(document.body);
+      //   console.log(typeof document.body);
+
+      //   console.log(document.body.innerHTML);
+      //   document.body.innerHTML = "<button>Good job!!!</button>";
+
+      //   console.log(document.querySelector("button").innerHTML);
+      //   document.querySelector("button").innerHTML = "Changed";
+
+      //   const secondBtn = document.querySelector(".secondBtn");
+      //   console.log(secondBtn);
+    </script>
+  </body>
+</html>

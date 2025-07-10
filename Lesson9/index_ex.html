@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 9 Exercise</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <br /><br /><br />
+
+    <button class="button-9b">9b</button>
+    <br /><br /><br />
+
+    <button onclick="press('heads')">Heads</button>
+    <button onclick="press('tails')">Tails</button>
+    <p class="result"></p>
+    <br /><br /><br />
+
+    <input
+      class="name-input"
+      placeholder="Name"
+      onkeydown="handleNameKeyDown(event)"
+    />
+    <button onclick="displayName()">submit</button>
+    <p class="name-display"></p>
+    <br /><br /><br />
+
+    <input
+      type="number"
+      placeholder="Cost of order"
+      class="cost-input"
+      onkeydown="handleCostKeyDown(event)"
+    />
+    <button onclick="calculate()">Calculate</button>
+    <p class="cost-display"></p>
+    <br /><br /><br />
+
+    <input
+      type="text"
+      class="input-9h"
+      onkeyup="displaySearch()"
+      placeholder="Type something"
+    />
+    <p class="display-9h"></p>
+    <br /><br /><br />
+
+    <script>
+      const button9a = document.querySelector("button");
+      console.log(button9a);
+
+      const button9b = document.querySelector(".button-9b");
+      button9b.innerText = "9b done!";
+
+      function press(button) {
+        const displayResult = document.querySelector(".result");
+        displayResult.innerHTML = `You chose: ${button}`;
+      }
+
+      function handleNameKeyDown(event) {
+        if (event.key === "Enter") {
+          displayName();
+        }
+      }
+
+      function displayName() {
+        const name = document.querySelector(".name-input").value;
+        const nameDisplay = document.querySelector(".name-display");
+        nameDisplay.innerText = `Your name is: ${name}`;
+      }
+
+      function handleCostKeyDown(event) {
+        if (event.key === "Enter") {
+          calculate();
+        }
+      }
+
+      function calculate() {
+        let cost = Number(document.querySelector(".cost-input").value);
+        console.log(cost);
+        let costDisplay = document.querySelector(".cost-display");
+        if (cost < 40) {
+          cost = (cost * 100 + 1000) / 100;
+        }
+        costDisplay.innerText = `$${cost}`;
+      }
+
+      function displaySearch() {
+        const inputText = document.querySelector(".input-9h").value;
+        const displayText = document.querySelector(".display-9h");
+        displayText.innerText = inputText;
+      }
+    </script>
+  </body>
+</html>

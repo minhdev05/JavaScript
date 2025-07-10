@@ -1,0 +1,70 @@
+.amazon-btn {
+  background-color: rgb(255, 216, 20);
+  color: black;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 8px 50px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.request-btn {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.schedule-btn {
+  background-color: rgb(230, 230, 230);
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gaming-btn,
+.music-btn,
+.tech-btn {
+  background-color: rgb(230, 230, 230);
+  color: black;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.is-toggled {
+  background-color: black;
+  color: white;
+}
+
+.cost-input {
+  padding: 10px 10px;
+  font-size: 15px;
+}
+
+.calculate-btn {
+  background-color: green;
+  color: white;
+  border: solid 1px green;
+  font-size: 15px;
+  padding: 11px 15px;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: red;
+}
